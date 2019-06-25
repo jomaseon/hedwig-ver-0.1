@@ -36,12 +36,12 @@ class ViewController: UIViewController {
                 let sql1 = "CREATE TABLE IF NOT EXISTS MEMBER (ID TEXT PRIMARY KEY, PASSWORD TEXT, NAME TEXT, AGE INTEGER)"
                 // if not exists test : 테이블이 존재하지 않으면
                 // 실행할 쿼리를 sql1 상수에 미리 저장하고 executeStatements로 구문을 실행해 실제 DB 테이블 생성
-                let sql2 = "INSERT INTO MEMBER VALUES ('root', '1234', '운영자', '26'"
+                let sql2 = "INSERT INTO MEMBER VALUES ('root', '1234', '운영자', '26')"
                 if !contactDB.executeStatements(sql1) {
-                    NSLog("SQL 오류")
+                    NSLog("SQL 오류1")
                 }
                 if !contactDB.executeStatements(sql2) {
-                    NSLog("SQL 오류")
+                    NSLog("SQL 오류2")
                 }
                 contactDB.close()
             } else {
